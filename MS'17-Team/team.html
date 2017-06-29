@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MindSpark17-Team</title>
+	<link rel="stylesheet" type="text/css" href="css/hexagons.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:311' rel='stylesheet' type='text/css'/>
+	<style>
+	{ margin: 0; padding: 0; }
+	.flapper {
+	margin-bottom: 2px;
+	text-align: center;
+	}
+	body { 
+        background: url('assets/team_back.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	}
+	.page-header {
+	 position:relative;
+	 left: 15%;
+	 align-content: center;
+	 top: 0;
+	 height: 10%;
+	 width: 100%;
+	 box-sizing: border-box;
+	}
+	div.page-header ul {
+	width: 100%;
+	font-family: "Segoe UI";
+	font-size: 18px;
+	min-width: 100%;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 10;
+  	overflow: hidden;
+  	/*background-color: #333;*/
+  	opacity: 1;
+    
+	}
+	div.page-header li {
+		float: left;
+		align-content: center;	
+	}
+	div.page-header a{
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 18px;
+	  text-decoration: none;
+	}
+	div.page-header a:hover {
+		opacity: 1.0;
+	  background-color: black;
+	  color: white;
+	}
+	html, body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+	</style>
+	<!-- Import Flapper -->
+	<link href="flapper/css/flapper.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="flapper/transform/dist/jquery.transform-0.9.3.min.js"></script>
+        <script src="flapper/jshashtable-2.1/jshashtable.js"></script>
+        <script src="flapper/numberformatter/jquery.numberformatter-1.2.3.min.js"></script>
+        <script src="flapper/src/jquery.flapper.js"></script>
+        <script language="javascript">
+            $(document).ready(function() {
+                var $header_display = $('#header_display');
+                $header_display.flapper({
+                    width: 8,
+                    chars_preset: 'alpha'
+                });
+                setTimeout(function(){
+                    $header_display.val('OUR TEAM').change();
+                    $demos.val(9).change();
+                    var toggle = false;
+                    setInterval(function(){
+                        if (toggle) {
+                            $header_display.val('OUT TEAM').change();
+                            $demos.val(9).change();
+                        } else {
+                            $header_display.val('').change();
+                            $demos.val('').change();
+                        }
+                        toggle = !toggle;
+                    }, 5000);
+                }, 1000);
+
+            });
+        </script>
+	<!-- End of Flapper -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+	    $('.modal').modal();
+	  });
+        </script>
+</head>
+<body>	
+	<div class="page-header" id="co">
+		<ul>
+			<li><a href="comingsoon.html">Events</a></li>
+			<li><a href="comingsoon.html">Workshop</a></li>
+			<li><a href="comingsoon.html">Keynotes</a></li>
+			<li><a href="comingsoon.html">Alumni Sponsors</a></li>
+			<li><a href="comingsoon.html">Team</a></li>
+			<li><a href="comingsoon.html">Championship</a></li>
+			<li><a href="comingsoon.html">Sponsors</a></li>
+		</ul>
+	</div>
+	<br><br><br><br>
+        <input id="header_display"/>
+        <br><br>
+	<ul id="hexGrid">
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#one">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Gargya Gokhale</h1>
+		    <p>Technical Secretary</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Ankita Fate</h1>
+		    <p>Events Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1 class="h1">Bhushan Totla</h1>
+		    <p class="p">Events Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Chinmayee Athlye</h1>
+		    <p>Finance Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Rayan Jain</h1>
+		    <p>Finance Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Lehanshu Khatri</h1>
+		    <p>Corporate Outreach Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Anupama Mishra</h1>
+		    <p>Accounts Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Piyush Yadav</h1>
+		    <p>Accounts Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Sharanya Nayak</h1>
+		    <p>Media Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Kanan Taludkar</h1>
+		    <p>Publicity Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Avinash Jadhav</h1>
+		    <p>Publicity Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Ishant Pakmode</h1>
+		    <p>Outreach Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Pranjal Chopade</h1>
+		    <p>Outreach Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Anoushka Kundu</h1>
+		    <p>Documentation Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Devarghya Debray</h1>
+		    <p>Design Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Joel Turalapti</h1>
+		    <p>Design Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Akshay Sapkale</h1>
+		    <p>Championship Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Anand Muluk</h1>
+		    <p>Infrastructure Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Swapnil Bagal</h1>
+		    <p>ESM Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Harshal Chaudhari</h1>
+		    <p>Purchase Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink">
+		    <img src="assets/blank.svg">
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Ashutosh Igave</h1>
+		    <p>Hospitality Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Akshay Devane</h1>
+		    <p>Refreshments Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Soma Shrinath</h1>
+		    <p>Crowd Handling Head</p>
+		  </a>
+		</div>
+		</li>
+		<li class="hex">
+		<div class="hexIn">
+		  <a class="hexLink" href="#">
+		    <img src="assets/icon.png" alt="assets/icon.png">
+		    <h1>Vinit Varu</h1>
+		    <p>Web Head</p>
+		  </a>
+		</div>
+		</li>
+	</ul>
+	
+	<div id="one" class="modal">
+		<div class="modal-content">
+		<table><tr>
+			<td>
+				<img src="assets/icon.png" class="circle materialboxed" width="240">
+			</td>
+			<td>
+			<p>Hello, I am Person 1. I am "XYZ" of MS'17</p>
+			<p><b>Contact details :</b></p>
+			<ul>	<li>Name : </li>
+				<li>Phone number :</li>
+				<li>Portfolio :</li>
+				<li>Email :</li>
+			</ul>
+			</td>
+		</table></tr>
+		</div>
+		<div class="modal-footer">
+		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+		</div>
+	</div>
+</body>
+</html>
