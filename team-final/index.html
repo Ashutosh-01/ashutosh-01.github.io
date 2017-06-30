@@ -16,12 +16,12 @@
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 	}
-	.figure:hover img {
+	<!--/*.figure:hover img {
 		-webkit-filter: grayscale(0);
 		filter: grayscale(0);
-	}
+	}*/-->
 	.section {
-	background-color : #17355b;
+	background-color:#00ffffff;
 	}
 	*.unselectable {
 	   -moz-user-select: -moz-none;
@@ -38,6 +38,11 @@
 	html, body {
 		max-width: 100%;
 		overflow-x: hidden;
+		background: url('assets/team_back_day.png') no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	</style>
     </head>
@@ -56,8 +61,10 @@
 	    $('.card').hover(
 		function() {
 		    $(this).find('> .card-content > .activator').click();
+		    $(this).find('> .card-image').addClass('figure');
 		}, function() {
 		    $(this).find('> .card-reveal > .card-title').click();
+		    $(this).find('> .card-image').removeClass('figure');
 		}
 	    );
 	});
@@ -65,14 +72,11 @@
 	var date = new Date();
 	var hours = date.getHours();
 	if(6<=hours && hours<=18)
-	{	$('#parallax_back').attr('src','assets/team_back_day.png');
-		$('#team').css("background-color","#3d5afe");
+	{	
 	}
 	});
       </script>
-      <div class="parallax-container unselectable" unselectable="on">
-	<div class="parallax"><img id="parallax_back" src="assets/team_back_night.png" onclick="return false"></div>
-     </div>
+      <br/><br/><br/><br/><br/><br/><br/>
      <!-- Couple Of Things Inherited From Main MindSpark'17 page -->
      <div id="mySidenav" class="sidenav">
   <a href="#" id="about" onclick="openNavAbout()">About Us</a>
@@ -192,23 +196,20 @@
 </script>
 <!-- My Things Start from below :p -->
      
-     <div class="section white-text" id="team">
-	     <h2 style="text-align: center;">The Team</h2>
+	     <h2 style="text-align: center;" class="white-text"><u>-: The Team :-</u></h2>
 	     <div class="row">
-		<div class="col s12 m3 ">
+		<div class="col s12 m6 l3">
 			<div class="card">
 				<div class="card-image activator">
-				<div class="figure" id="image1">
-				<img src="assets/example.jpg" class="image">
-				</div>
+				<img src="assets/example.jpg" class="image" id="profile1">
 				</div>
 				<div class="card-reveal">
 				<span class="card-title grey-text text-darken-4"
 				      onclick="$('#image1').addClass('figure');">
-				Name Surname <i class="material-icons right">close</i></span>
+				PortFolio 1 <i class="material-icons right">close</i></span>
 				<p class="black-text"><b>Details :</b></p>
 				<ul class="black-text">
-				<li>Portfolio : </li>
+				<li>Name : </li>
 				<li>Contact No. :</li>
 				<li>Email :</li>
 				</ul>
@@ -216,74 +217,14 @@
 				<div class="card-content">
 				      <span class="card-title activator grey-text text-darken-4" 
 					    onclick="$('#image1').removeClass('figure');">
-					    Name Surname<!--i class="material-icons right">more_vert</i--></span>
+					    PortFolio 1</span>
 				</div>
 			</div>
 		</div>
-		<div class="col s12 m3 ">
-			<div class="card">
-				<div class="card-image activator">
-				<div class="figure">
-				<img src="assets/1.jpg" class="image">
-				</div>
-				</div>
-				<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4">Name Surname <i class="material-icons right">close</i></span>
-				<p class="black-text"><b>Details :</b></p>
-				<ul class="black-text">
-				<li>Portfolio : </li>
-				<li>Contact No. :</li>
-				<li>Email :</li>
-				</ul>
-				</div>
-				<div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Name Surname<!--i class="material-icons right">more_vert</i--></span>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m3 ">
-			<div class="card">
-				<div class="card-image activator">
-				<div class="figure">
-				<img src="assets/1.jpg" class="image">
-				</div>
-				</div>
-				<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4">Name Surname <i class="material-icons right">close</i></span>
-				<p class="black-text"><b>Details :</b></p>
-				<ul class="black-text">
-				<li>Portfolio : </li>
-				<li>Contact No. :</li>
-				<li>Email :</li>
-				</ul>
-				</div>
-				<div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Name Surname<!--i class="material-icons right">more_vert</i--></span>
-				</div>
-			</div>
-		</div>
-		<div class="col s12 m3 ">
-			<div class="card">
-				<div class="card-image activator">
-				<div class="figure">
-				<img src="assets/1.jpg" class="image">
-				</div>
-				</div>
-				<div class="card-reveal">
-				<span class="card-title grey-text text-darken-4">Name Surname <i class="material-icons right">close</i></span>
-				<p class="black-text"><b>Details :</b></p>
-				<ul class="black-text">
-				<li>Portfolio : </li>
-				<li>Contact No. :</li>
-				<li>Email :</li>
-				</ul>
-				</div>
-				<div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Name Surname<!--i class="material-icons right">more_vert</i--></span>
-				</div>
-			</div>
-		</div>
+		
+		
+		
 	      </div>
-     </div>
+     
     </body>
  </html>
