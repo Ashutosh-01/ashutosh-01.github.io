@@ -56,7 +56,6 @@ html.loading body {
 	  	$(document).ready(function(){
 		/* the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered */
 		$('.modal').modal();
-		$( "html" ).removeClass( "loading" );
 		});
 		/*For parallax*/
 		 $(document).ready(function(){
@@ -72,7 +71,9 @@ html.loading body {
 		});
 		/*For Side Navigation */
 		
-
+    $(window).on("load",function(){
+        $("html").removeClass("loading");
+    });
 	  $('.button-collapse').sideNav({
 		  menuWidth: 300, // Default is 300
 		  edge: 'right', // Choose the horizontal origin
