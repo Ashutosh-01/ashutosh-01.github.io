@@ -234,8 +234,6 @@
   </script>
   <script>
 $(document).ready(function(){
-  $("body").not(".preloader").fadeOut();
-  $(".preloader").fadeIn();
 	$('#typewriter').typewriter({
 		prefix : ": ",
 		text : ["Hi ! I am Ashutosh Sathe.", "I'm just another engineering student from India.", "I like to talk about android and web development"],
@@ -254,7 +252,6 @@ $(document).ready(function(){
 	$('.tooltipped').tooltip({delay: 50});
 	$(window).on("load", function(){	
 		$(".preloader").fadeOut();
-		$("body").not(".preloader").fadeIn();
 	});
 });
 </script>
