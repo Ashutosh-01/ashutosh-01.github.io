@@ -9,10 +9,73 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link rel="stylesheet" href="css/style.css" type="text/css"> 
       <link rel="stylesheet" href="css/animate.css" type="text/css"> 
+<style>
+.preloader {
+  width: 100%;
+  height: 100%;
+	background-color:#04132B !important;
+	transition: all 0.3s ease-out;
+	oevrflow:hidden;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce1 {
+	background-color:#105978 !important;
+}
+.double-bounce2 {
+	background-color:#12517A !important;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
 </head>
 
 <body class="scrollspy">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="preloader">
+<div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
+</div>
  <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
@@ -171,6 +234,7 @@
   </script>
   <script>
 $(document).ready(function(){
+  $("body").not(".preloader").fadeOut();
 	$('#typewriter').typewriter({
 		prefix : ": ",
 		text : ["Hi ! I am Ashutosh Sathe.", "I'm just another engineering student from India.", "I like to talk about android and web development"],
@@ -186,7 +250,11 @@ $(document).ready(function(){
 	      draggable: true, // Choose whether you can drag to open on touch screens
 	    }
 	);
-	$('.tooltipped').tooltip({delay: 50});	
+	$('.tooltipped').tooltip({delay: 50});
+	$(window).on("load", function(){	
+		$(".preloader").fadeOut();
+		$("body").not(".preloader").fadeIn();
+	});
 });
 </script>
 </body>
