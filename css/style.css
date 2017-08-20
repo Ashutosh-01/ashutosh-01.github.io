@@ -1,0 +1,278 @@
+html,
+body {
+	height:100%;
+}
+@font-face {
+    font-family: 'continuum';
+    src: url('../fonts/contm-webfont.woff2') format('woff2'),
+         url('../fonts/contm-webfont.woff') format('woff'),
+	 url('../fonts/contm-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.github,
+.googleplus,
+.xda {
+	font-family: 'continuum';
+	font-size : 24px;
+}
+.xda {
+	margin-top: 4px !important;
+	margin-bottom : 4px !important;
+	font-size : 15px;
+}
+.mybluetransperant {
+	background-color : rgba(26,35,126, 0.6) !important;
+}
+.myblue {
+	background-color: #12517A !important;
+}
+.parallax-container {
+	height:80%;
+}
+.whitealpha {
+	background-color : rgba(0, 14, 28, 0.3) !important;
+	color: white !important;
+	border-color: white !important;
+}
+#shell-container {
+	height:70%;
+}
+#shell {
+  /*width: 500px;*/
+  width: 50%;
+  /*height: 270px;*/
+  height:60%;
+  background: #000;
+  border-radius: 8px;
+  margin: 0 auto;
+  color: #383838;
+  font-family: monaco, monospace;
+  font-size: .8em;
+}
+
+#upper {
+  font-family: monaco, monospace;
+  font-size: .8em;
+  background: #e5e5e5;
+  background: -webkit-linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+  background: linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+  background-image: -moz-linear-gradient(#e5e5e5 0%, #b0b0b0 100%);
+  -webkit-border-radius: 8px 8px 0px 0px;
+  -moz-border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
+  height: 15%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 2px solid #333;
+}
+
+.title {
+  font-family: monaco, monospace;
+  font-size: .8em;
+  margin-left: -70px;
+  font-size: 120%;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  margin: 3px 3px 3px 3px;
+  float: left;
+}
+
+.red {
+  background: #f04341;
+  border: 1px solid #eb1513;
+}
+
+.yellow {
+  background: #f5b868;
+  border: 1px solid #f2a238;
+}
+
+.green {
+  background: #96cf7d;
+  border: 1px solid #78c158;
+}
+
+#main {
+  font-family: monaco, monospace;
+  font-size: .8em;
+  padding: 5px;
+  font-size:150%;
+  min-height:100%;
+  color: #c0c7c7;
+  border-left:1px solid  #333333;
+  border-right:1px solid  #333333;
+  border-bottom:1px solid  #333333;
+  background-color: #5E2750;
+  -webkit-border-radius: 0px 0px 8px 8px;
+  -moz-border-radius: 0px 0px 8px 8px;
+  border-radius: 0px 0px 8px 8px;
+  height: 100%;
+  box-shadow:12px;
+}
+#main .fore {
+  color: #4caf50;
+}
+#main .accent {
+  color: #00b5c3;
+}
+
+#main:before {
+  /*content:"The Question Here";*/
+  display: block;
+}
+
+#enter {
+  display: inline;
+  margin-left: .01em;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#enter:focus {
+  outline: 0px solid transparent;
+}
+
+.inner-light-top {
+  position: relative;
+  z-index: 2;
+  margin: 0px 3px;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.inner-light-bottom {
+  margin: -1px 3px;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+}
+
+.inner-dark-top {
+  top: -10px;
+  height: 8px;
+  width: 10px;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.red .inner-dark-top {
+  background: rgba(235, 21, 19, 0.4);
+  margin: -5px 0px;
+}
+
+.yellow .inner-dark-top {
+  background: rgba(242, 162, 56, 0.4);
+  margin: 3px 0px;
+}
+
+.green .inner-dark-top {
+  background: rgba(120, 193, 88, 0.4);
+  margin: 3px 0px;
+}
+
+#filler {
+  background-color: black;
+  border: none;
+  outline: 0;
+  color: white;
+}
+
+green {
+  color: green;
+}
+
+ops {
+  color: orange;
+}
+
+red {
+  color: red;
+}
+
+white {
+  color: white;
+}
+
+cmd {
+  text-align: left;
+}
+
+cmd:after {
+  content: "\00a0 > \00a0";
+  float: left;
+}
+
+/*Making it responsive */
+@media only screen and (max-width: 375px) {
+	#shell {
+		width: 95%;
+		height: 70%;
+	}
+	.title {
+		display:none;
+	}
+	#main {
+		font-size: 150%;
+	}
+	#upper {
+		height:10% !important;
+	}
+	.parallax-container {
+		height:75%;
+	}
+
+}
+@media only screen and (max-width: 500px) and (min-width: 375px) {
+	#shell {
+		width: 95%;
+		height: 70%;
+	}
+	.title {
+		display:none;
+	}
+	#main {
+		font-size: 200%;
+	}
+	#upper {
+		height:12% !important;
+	}
+	.parallax-container {
+		height:60%;
+	}
+}
+@media only screen and (min-width: 501px) and (max-width:1025px) {
+	#shell {
+		width: 80%;
+		height: 100%;
+	}
+	#upper {
+		height: 15% !important;
+	}
+	.title{
+		font-size: 120% !important;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	#shell-container {
+		height: 50%;
+	}
+	.parallax-container {
+		height:45%;
+	}
+}
