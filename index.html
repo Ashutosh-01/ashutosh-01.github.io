@@ -68,7 +68,7 @@
 </style>
 </head>
 
-<body class="scrollspy">
+<body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="preloader">
 <div class="spinner">
@@ -104,7 +104,6 @@
     </div>
   </nav>
   </div>
-  <div class="parallax"><img src="images/parallax1.jpg"></div>
   <br><br>
 <div id="shell-container">
   <div id="shell">
@@ -136,6 +135,7 @@
   </div>
   </div>
 </div>
+  <div class="parallax"><img src="images/parallax1.jpg"></div>
 </div>
 <div class="section myblue white-text scrollspy" id="academics">
     <div class="row container">
@@ -234,24 +234,27 @@
   </script>
   <script>
 $(document).ready(function(){
-	$('#typewriter').typewriter({
-		prefix : ": ",
-		text : ["Hi ! I am Ashutosh Sathe.", "I'm just another engineering student from India.", "I like to talk about android and web development"],
-		typeDelay : 50,
-		waitingTime : 2500,
-		blinkSpeed : 200
-	});
-	$('.parallax').parallax();
-	$('.scrollspy').scrollSpy();
-	$('.button-collapse').sideNav({
-	      menuWidth: 300, // Default is 300
-	      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-	      draggable: true, // Choose whether you can drag to open on touch screens
-	    }
-	);
+	$('body').children().not('.preloader').fadeOut();
+	$('.parallax').delay(100).parallax();
 	$('.tooltipped').tooltip({delay: 50});
-	$(window).on("load", function(){	
-		$(".preloader").fadeOut();
+	$(window).on("load", function(){
+		$('body').children().not('.preloader, script').delay(500).fadeIn();
+		$('.parallax').delay(100).parallax();
+		$(".preloader").delay(500).fadeOut();
+		$('#typewriter').typewriter({
+			prefix : ": ",
+			text : ["Hi ! I am Ashutosh Sathe.", "I'm just another engineering student from India.", "I like to talk about android and web development"],
+			typeDelay : 50,
+			waitingTime : 2500,
+			blinkSpeed : 200
+		});
+		$('.scrollspy').delay(100).scrollSpy();
+		$('.button-collapse').sideNav({
+	      		menuWidth: 300, // Default is 300
+	      		closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	      		draggable: true, // Choose whether you can drag to open on touch screens
+	    	}
+		);
 	});
 });
 </script>
