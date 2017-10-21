@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ashutosh B. Sathe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/style.css" type="text/css"> 
+      <link rel="stylesheet" href="css/animate.css" type="text/css"> 
+<style>
+.preloader {
+  width: 100%;
+  height: 100%;
+	background-color:#04132B !important;
+	transition: all 0.3s ease-out;
+	oevrflow:hidden;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce1 {
+	background-color:#105978 !important;
+}
+.double-bounce2 {
+	background-color:#12517A !important;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+</style>
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/side-nav-back.jpg">
+      </div>
+      <a onclick="return false;"><img class="circle" src="images/user.jpg"></a>
+      <a onclick="return false;"><span class="white-text name">Ashutosh Sathe</span></a>
+      <a onclick="return false;"><span class="white-text email">ashutoshbsathe.github.io</span></a>
+    </div></li>
+    <li><a href="index.html">Go to home</a></li>
+  </ul>
+<div class="section myblue white-text scrollspy" id="academics">
+    <div class="row container">
+      <h2 class="header">Spreaddit - A simple, lightweight spreadsheet editor </h2>    
+	<br><br><div class="divider"></div><br><br>
+<p>Spreaddit is a simple and lightweight spreadsheet editor fully written in C. This project is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License V3.</a></p>
+<p>Spreaddit allows you to :</p>
+<ol>
+<li>Open and edit .csv files.
+<li>Open and edit .ods files. (Still in beta phase)
+<li>Evaluate expressions based on cell data.
+<li>Allow you to change date format in spreadsheet.
+<li>Save the modified file in .csv format.
+</ol>
+<h3>Dependencies :</h3>
+<ol>
+<li><b>GTK+3 :</b> This project uses GTK+3 library to build GUI. Recommended version is 3.18.9. To install this dependency, type the following in the command prompt :<br>
+<code>sudo apt-get install libgtk-3-dev</code><br>
+Recommended version of this package is 3.18.9-1ubuntu3.3
+<li><b>LibXML2 :</b> This project uses LibXML2 library to read the content.xml from the extracted ods file. To install this dependency, type the following in your command prompt :<br>
+<code>sudo apt-get install libxml2-dev</code><br>
+Recommended version of this package is 2.9.3+dfsg1-1ubuntu0.3
+</ol>
+<h3>Application Panel : </h3>
+<a><img src="images/spreaddit/mainwindow.png"></img></a>
+<br>
+<h4>Bold Button :</h4>
+<a><img src="images/spreaddit/bold.png"></img></a>
+<p>This button is used to make text in the cell bold. To make text bold, select a cell and click on this button to make it bold. If the selected cell has already bold text, clicking on this button will remove bold style from the cell.</p>
+
+<h4>Italic Button :</h4>
+<a><img src="images/spreaddit/italic.png"></img></a>
+<p>This button is used to make text in the cell italic. To make text italic, select a cell and click on this button to make it italic. If the selected cell has already italic text, clicking on this button will remove italic style from the cell.</p>
+
+
+<h4>Open Buttons :</h4>
+<a><img src="images/spreaddit/open.png"></img></a>
+<p>These buttons are for opening a specific type of file. Click on respective buttons to open either ".ods" file or ".csv' file. Please note that opening a ".ods" file is still in beta stages. If you find any issues with the ".ods" files, you can report them to me and I'll try to fix it ASAP. <b>Additionally, there are some restrictions on type of "ods" file which is being opened:</b>
+<ol>
+<li>ods file should contain only a single spreadsheet.
+<li>ods file should not contain heavy styling
+<li>ods file should not contain any graphs
+<li>[IMP]ods file should not contain any merged cells / columns
+</ol>
+</p>
+
+<h4>Save Button :</h4>
+<a><img src="images/spreaddit/save.png"></img></a>
+<p>This button is used to save the current file in .csv file format. For the first time you will be prompted to enter filename and select a folder for saving the file, From next click on "Save", Program will keep writing to the specified file.<b> The filename should also contain the ".csv" file extension. If the filename does not contain ".csv", the program may not behave correctly.</b></p>
+     
+
+<h4>Insert Row Below Button :</h4>
+<a><img src="images/spreaddit/insertrowbelow.png"></img></a>
+<p>Adds a row of empty cells below currently active cell.</p>
+
+<h4>Insert Row Above Button :</h4>
+<a><img src="images/spreaddit/insertrowabove.png"></img></a>
+<p>Adds a row of empty cells above currently active cell.</p>
+
+<h4>Insert Column Left Button :</h4>
+<a><img src="images/spreaddit/insertcolleft.png"></img></a>
+<p>Adds a column of empty cells to left of currently active cell.</p>
+
+<h4>Insert Column Right Button :</h4>
+<a><img src="images/spreaddit/insertcolright.png"></img></a>
+<p>Adds a column of empty cells to right of currently active cell.</p>
+
+
+<h4>Date Formatting Buttons :</h4>
+<a><img src="images/spreaddit/dateformatter.png"></img></a>
+<p>Select a cell containing the date and click on the desired date formatting button. Currently, following date formats are supported :<br>
+<ol>
+<li>DD/MM/YYYY : In this format, 19 Jan. 2000 will be displayed as 19/01/2000.
+<li>DD-MM-YYYY : In this format, 19 Jan. 2000 will be displayed as 19-01-2000.
+<li>DD Month YYYY : In this format, 19/01/2000 will be displayed as 19 Jan. 2000.
+</ol>
+</p>
+
+<h4>Delete Row & Delete Column Buttons :</h4>
+<a><img src="images/spreaddit/deleterowcol.png"></img></a>
+<p>Delete Row button deletes the row containing the currently active cell. If only single row/column is present in entire spreadsheet, then you cannot delete it. Similarly, Delete Column button deletes the column containing the currently active cell.</p>
+
+<h4>Formula Bar & Message Window :</h4>
+<a><img src="images/spreaddit/formulaandmsg.png"></img></a>
+<p>
+These two are most important parts of this application window. You should always keep an eye on the message window. You will get important information such as coordinates of active cell in message window. Any error / notification messages will be flashed in yellow background in message window.<br>
+The formula bar can be used to edit the content of the active cell. After editing the content in the formula bar, you must click "Apply" button to reflect them in the active cell.
+You can write mathematical expressions involving various cells in the formula bar.<br>
+For e.g. : <code> =A1 + B1 + C1 </code><br>
+To include a specific cell's data in the formula bar, you can simply write the coordinates of the cell. You can also include integer constants in the expression <br>
+For e.g. : <code> =A1 + 1024</code></br>
+The formula should contain <b>only integer data .</b> If the formula evaluates to a non integer, only integer part will be considered.
+After the formula is evaluated, the answer will be saved to the active cell.
+<br>
+<b>Note : </b> If the first character in your edited formula bar content is '=' and you don't want to evaluate it as formula, put the formula between the columns. For e.g. <code> "=A1 + B1"</code>
+<br>
+<h5>Special Formulae : </h5>
+There are some special formulae provided to the user for sorting the data.
+<ol>
+<li><h6>=sort(ASC)</h6> This formula sorts the part of active column in the ascending order. <br>
+<b>Note :</b> Please note that, cells selected from the active cell up to the last cell in the column will get sorted in ascending order.
+<li><h6>=sort(DESC)</h6> This formula sorts the part of active column in the descending order. <br>
+<b>Note :</b> Please note that, cells selected from the active cell up to the last cell in the column will get sorted in descending order.
+</ol>
+</p>
+</div>   
+</div>
+
+<footer class="page-footer myblue scrollspy" id="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About This Page </h5>
+                <p class="grey-text text-lighten-4"> This page is a GitHub Page. The source code of this website can be found on my GitHub Profile.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contact Me</h5>
+		<p> Drop me a line !</p>
+                <ul>
+                  <li><a class="grey-text text-lighten-3 googleplus tooltipped" href="https://plus.google.com/u/0/111355450919914869862" target="_blank" data-position="right" data-delay="50" data-tooltip="Google+ Profile"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a class="grey-text text-lighten-3 github tooltipped" href="https://github.com/Ashutosh-01" target="_blank" data-position="right" data-delay="50" data-tooltip="GitHub Profile"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                  <li><a class="grey-text text-lighten-3 xda tooltipped" href="https://forum.xda-developers.com/member.php?u=7640381" target="_blank" data-position="right" data-delay="50" data-tooltip="XDA Profile">XDA</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright" style="background-color:rgba(0,0,0,0.3)">
+            <div class="container">
+	    <div class="white-text">
+	    Made with&nbsp;<i class="fa fa-heart" aria-hidden="true"></i>&nbsp;using&nbsp;<a href="http://materializecss.com/" class="white-text">MaterializeCSS</a>
+	    </div>
+            </div>
+          </div>
+        </footer>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/jquery.typewriter.js"></script>
+  <script src="js/wow.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <script>
+$(document).ready(function(){
+	$('.parallax').delay(100).parallax();
+	$('.tooltipped').tooltip({delay: 50});
+	$(window).on("load", function(){
+		$('body').children().not('.preloader, script').delay(500).fadeIn();
+		$('.parallax').delay(100).parallax();
+		$(".preloader").delay(500).fadeOut();
+		$('#typewriter').typewriter({
+			prefix : ": ",
+			text : ["Hi ! I am Ashutosh Sathe.", "I'm just another engineering student from India.", "I like to talk about android and web development"],
+			typeDelay : 50,
+			waitingTime : 2500,
+			blinkSpeed : 200
+		});
+		$('.scrollspy').delay(100).scrollSpy();
+		$('.button-collapse').sideNav({
+	      		menuWidth: 300, // Default is 300
+	      		closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	      		draggable: true, // Choose whether you can drag to open on touch screens
+	    	}
+		);
+	});
+});
+</script>
+</body>
+</html>
